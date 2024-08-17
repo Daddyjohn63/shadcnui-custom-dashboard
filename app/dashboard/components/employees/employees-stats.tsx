@@ -1,12 +1,12 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  CardTitle
+} from '@/components/ui/card';
 import {
   AlertTriangleIcon,
   BadgeCheckIcon,
@@ -15,12 +15,12 @@ import {
   UserCheck2Icon,
   UserCheckIcon,
   UserIcon,
-  UserRoundXIcon,
-} from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import cm from "@/public/images/cm.jpg";
-import WorkLocationTrends from "./work-location-trends";
+  UserRoundXIcon
+} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import cm from '@/public/images/cm.jpg';
+import WorkLocationTrends from './work-location-trends';
 
 export default function EmployeesStats() {
   const totalEmployees = 100;
@@ -85,6 +85,7 @@ export default function EmployeesStats() {
             </Avatar>
             <span className="text-2xl">Colin Murray!</span>
           </CardContent>
+          {/* by using mt-auto after adding flex-col above, the footer of the card will sit at the bottom of the card. */}
           <CardFooter className="flex gap-2 items-center text-xs text-muted-foreground mt-auto">
             <PartyPopperIcon className="text-pink-500" />
             <span>Congratulations, Colin!</span>

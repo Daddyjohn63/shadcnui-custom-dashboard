@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import MainMenu from "./components/main-menu";
-import MenuTitle from "./components/menu-title";
-import { MenuIcon } from "lucide-react";
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { useState } from "react";
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
+import MainMenu from './components/main-menu';
+import MenuTitle from './components/menu-title';
+import { MenuIcon } from 'lucide-react';
+import { useMediaQuery } from '@/hooks/use-media-query';
+import { useState } from 'react';
 
 export default function DashboardLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -26,7 +26,7 @@ export default function DashboardLayout({
             direction="right"
             open={mobileMenuOpen}
             onClose={() => setMobileMenuOpen(false)}
-            onOpenChange={(open) => setMobileMenuOpen(open)}
+            onOpenChange={open => setMobileMenuOpen(open)}
           >
             <DrawerTrigger>
               <MenuIcon />
@@ -38,7 +38,7 @@ export default function DashboardLayout({
         </div>
       )}
       <div className="overflow-auto py-2 px-4">
-        <h1 className="pb-4">Welcome back, Tom!</h1>
+        <h1 className="pb-4">Welcome back, John!</h1>
         {children}
       </div>
     </div>

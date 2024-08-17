@@ -1,13 +1,13 @@
-"use client";
-import { Button } from "@/components/ui/button";
+'use client';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  CardTitle
+} from '@/components/ui/card';
 import {
   Form,
   FormControl,
@@ -15,20 +15,20 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { PasswordInput } from "@/components/ui/password-input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { PersonStandingIcon } from "lucide-react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
+  FormMessage
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { PasswordInput } from '@/components/ui/password-input';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { PersonStandingIcon } from 'lucide-react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useForm } from 'react-hook-form';
+import * as z from 'zod';
 
 const formSchema = z.object({
   email: z.string().email(),
-  password: z.string(),
+  password: z.string()
 });
 
 export default function LoginPage() {
@@ -36,14 +36,14 @@ export default function LoginPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      email: "",
-      password: "",
-    },
+      email: '',
+      password: ''
+    }
   });
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log("login validation passed");
-    router.push("/dashboard");
+    console.log('login validation passed');
+    router.push('/dashboard');
   };
 
   return (
@@ -94,7 +94,7 @@ export default function LoginPage() {
           </Form>
         </CardContent>
         <CardFooter className="justify-between">
-          <small>Don't have an account?</small>
+          <small>Do not have an account?</small>
           <Button asChild variant="outline" size="sm">
             <Link href="/sign-up">Sign up</Link>
           </Button>

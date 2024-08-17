@@ -1,9 +1,9 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import MenuItem from "./menu-item";
-import MenuTitle from "./menu-title";
-import Link from "next/link";
-import { LightDarkToggle } from "@/components/ui/light-dark-toggle";
-import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import MenuItem from './menu-item';
+import MenuTitle from './menu-title';
+import Link from 'next/link';
+import { LightDarkToggle } from '@/components/ui/light-dark-toggle';
+import { cn } from '@/lib/utils';
 
 export default function MainMenu({ className }: { className?: string }) {
   return (
@@ -23,7 +23,7 @@ export default function MainMenu({ className }: { className?: string }) {
       <footer className="flex gap-2 items-center">
         <Avatar>
           <AvatarFallback className="bg-pink-300 dark:bg-pink-800">
-            TP
+            JP
           </AvatarFallback>
         </Avatar>
         <Link href="/" className="hover:underline">
